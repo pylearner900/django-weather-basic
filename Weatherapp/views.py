@@ -14,7 +14,7 @@ def index(request):
         if form.is_valid():
             city = form.cleaned_data["city"]
             
-            response = urllib.request.urlopen("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=af7bfc59a87fbacb7f674b58194520e3").read()
+            response = urllib.request.urlopen("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=Your_api_key").read()
             
             data = json.loads(response)
             data_clean = {
